@@ -1,75 +1,24 @@
-# React + TypeScript + Vite
+# Goa Cyber Sunset
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Build a beautiful 16-bit pixel-art web shooter with a Goa Sunset x Cyberpunk vibe. The player pilots a small Goan sailboat (64×32px, white sail with cyan neon trim) gliding over a cyber-ocean (bottom ~35% with a cyan→dark gradient and sine-wave swells). The sky is a pixelated sunset gradient (violet→orange→yellow), with a pixel sun. The boat gently bobs with a short sine idle animation (±3px) and moves horizontally via arrows/A-D or touch-drag. The player fires cyan glowing splash projectiles (16×16px) upward from the mast top using space/tap; projectiles travel ~8px/frame. There are 4 floating buoy targets, each representing a required buoy “type,” moving with sine oscillation (±12px), plus horizontal drift (1–1.8px/frame) and edge bounce; each type also visually has a matching neon crate-label color theme. Additionally, one single golden special buoy exists as a rare extra-difficult target: hitting it immediately ends the game and grants a special reward. The win condition is: the player must destroy exactly one buoy of each of the four types (all 4 type buoys destroyed) to trigger game complete; separately, hitting the golden buoy ends the game instantly with its reward. Audio: 8-bit/retro splash-fire and crate-break SFX on firing and buoy destruction. Keep visuals crisp, readable, and strongly pixelated.
 
-Currently, two official plugins are available:
+This project was built with [Lovable](https://lovable.dev).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Build with Lovable
 
-## React Compiler
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/89dc3e7e-3fbe-4d23-b747-94089619ed48).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
-## Expanding the ESLint configuration
+## Development
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```sh
+git clone <this-repository-url>
+cd <repository-name>
+npm i
+npm run dev
 ```
