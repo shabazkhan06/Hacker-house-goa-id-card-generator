@@ -1,0 +1,574 @@
+/* =========================================
+   HERO
+========================================= */
+
+.hero-page {
+  position: relative;
+
+  min-height: 100svh;
+  width: 100%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #087332 0%,
+      #087332 38%,
+      #a9c40b 100%
+    );
+
+  color: #ffe900;
+}
+
+
+/* =========================================
+   PIXEL / HALFTONE BACKGROUND
+========================================= */
+
+.hero-pixels {
+  position: absolute;
+
+  left: -5%;
+  right: -5%;
+  top: 34%;
+
+  height: 360px;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255, 235, 0, 0.9) 1.5px,
+      transparent 1.5px
+    );
+
+  background-size: 11px 11px;
+
+  opacity: 0.85;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 18%,
+      black 65%,
+      transparent 100%
+    );
+
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 18%,
+      black 65%,
+      transparent 100%
+    );
+
+  transform: rotate(-2deg) scale(1.1);
+}
+
+
+/* second pixel layer */
+
+.hero-pixels::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 40px 10% 0;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(0, 91, 42, 0.9) 1.5px,
+      transparent 1.5px
+    );
+
+  background-size: 9px 9px;
+
+  opacity: 0.55;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.hero-nav {
+  position: relative;
+
+  z-index: 10;
+
+  width: calc(100% - 96px);
+
+  margin: 0 auto;
+
+  padding-top: 28px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+}
+
+
+/* Logo */
+
+.hero-logo {
+  color: #ffe900;
+
+  font-family:
+    Impact,
+    Haettenschweiler,
+    "Arial Narrow Bold",
+    sans-serif;
+
+  font-size: 32px;
+
+  line-height: 0.78;
+
+  letter-spacing: -1px;
+
+  text-transform: uppercase;
+
+  transform: rotate(-3deg);
+}
+
+.hero-logo span {
+  display: block;
+
+  margin-left: 27px;
+
+  font-size: 22px;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* Nav links */
+
+.hero-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+.hero-links a {
+  color: #f7f4df;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 15px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.hero-links a:hover {
+  color: #ffe900;
+
+  transform: translateY(-2px);
+}
+
+
+/* Create button */
+
+.hero-create {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 190px;
+
+  min-height: 68px;
+
+  padding: 14px 30px;
+
+  margin-left: 14px;
+
+  background: #ffe900;
+
+  color: #007334;
+
+  border: 3px solid #ff008c;
+
+  box-shadow:
+    7px 7px 0 rgba(0, 0, 0, 0.18);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.hero-create:hover {
+  transform:
+    translate(-3px, -3px);
+
+  box-shadow:
+    10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   MAIN HERO CONTENT
+========================================= */
+
+.hero-main {
+  position: relative;
+
+  z-index: 5;
+
+  min-height: calc(100svh - 100px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    70px 48px
+    100px;
+}
+
+
+/* =========================================
+   SMALL TOP LABEL
+========================================= */
+
+.hero-eyebrow {
+  position: relative;
+
+  z-index: 4;
+
+  width: fit-content;
+
+  margin:
+    0 auto
+    22px;
+
+  color: #ffe900;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   GIANT TITLE
+========================================= */
+
+.hero-title {
+  position: relative;
+
+  z-index: 3;
+
+  margin: 0 auto;
+
+  width: 100%;
+
+  color: #ffe900;
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+  font-size:
+    clamp(
+      90px,
+      17.5vw,
+      280px
+    );
+
+  font-weight: 900;
+
+  line-height: 0.72;
+
+  letter-spacing:
+    clamp(-12px, -0.7vw, -5px);
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  text-shadow:
+    4px 4px 0 rgba(0, 73, 37, 0.35);
+}
+
+
+/* Individual words */
+
+.hero-title .line {
+  display: block;
+}
+
+.hero-title .accent {
+  position: relative;
+
+  display: inline-block;
+
+  color: #ffe900;
+}
+
+
+/* =========================================
+   PINK ACCENT MARK
+========================================= */
+
+.hero-sticker {
+  position: absolute;
+
+  z-index: 8;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-8deg);
+
+  padding: 13px 22px;
+
+  background: #ff008c;
+
+  color: #ffe900;
+
+  border:
+    6px solid #ff008c;
+
+  font-family:
+    Impact,
+    Haettenschweiler,
+    sans-serif;
+
+  font-size: clamp(24px, 4vw, 58px);
+
+  line-height: 0.9;
+
+  text-transform: uppercase;
+
+  box-shadow:
+    5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   INFO BAR
+========================================= */
+
+.hero-info {
+  position: relative;
+
+  z-index: 10;
+
+  width: min(1270px, 100%);
+
+  margin:
+    42px auto
+    0;
+
+  min-height: 55px;
+
+  padding:
+    0 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-radius: 18px;
+
+  background:
+    rgba(77, 96, 8, 0.75);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15);
+
+  color: #ffe900;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.hero-info-left {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: center;
+}
+
+.hero-info-right {
+  text-align: right;
+}
+
+
+/* =========================================
+   BOTTOM META
+========================================= */
+
+.hero-meta {
+  position: relative;
+
+  z-index: 10;
+
+  margin:
+    84px auto
+    0;
+
+  text-align: center;
+
+  color: #f5f2d6;
+
+  font-family: "Space Mono", monospace;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.hero-meta .highlight {
+  color: #00b9a5;
+}
+
+.hero-meta-sub {
+  margin-top: 13px;
+
+  color: rgba(255,255,255,0.65);
+
+  font-size: 11px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .hero-nav {
+    width: calc(100% - 36px);
+
+    padding-top: 20px;
+  }
+
+  .hero-links a {
+    display: none;
+  }
+
+  .hero-create {
+    min-width: auto;
+
+    min-height: 52px;
+
+    padding: 10px 17px;
+
+    font-size: 17px;
+  }
+
+  .hero-main {
+    padding:
+      60px 18px
+      60px;
+  }
+
+  .hero-title {
+    font-size:
+      clamp(
+        65px,
+        18vw,
+        140px
+      );
+
+    line-height: 0.78;
+
+    white-space: normal;
+  }
+
+  .hero-sticker {
+    font-size: 24px;
+
+    padding: 9px 14px;
+  }
+
+  .hero-info {
+    margin-top: 35px;
+
+    padding: 12px 15px;
+
+    min-height: auto;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 7px;
+
+    border-radius: 12px;
+
+    font-size: 9px;
+  }
+
+  .hero-info-right {
+    text-align: left;
+  }
+
+  .hero-meta {
+    margin-top: 50px;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+  }
+
+  .hero-pixels {
+    top: 38%;
+
+    height: 300px;
+  }
+}

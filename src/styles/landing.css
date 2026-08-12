@@ -1,0 +1,1799 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
+
+/* ========================================
+   GLOBAL / LANDING PAGE
+======================================== */
+
+.hero,
+.hero * {
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.hero-section {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ========================================
+   TOP-RIGHT NAVIGATION
+======================================== */
+
+.pill-nav {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  z-index: 5;
+
+  background: transparent;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.hero-nav-right span {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+/* ========================================
+   CREATE BUTTON
+======================================== */
+
+.create-btn {
+  background: #ffe14d;
+  color: #1a5c2e;
+
+  padding: 12px 22px;
+
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 14px;
+
+  border: 3px solid #1a5c2e;
+
+  image-rendering: pixelated;
+
+  box-shadow:
+    3px 0 0 #1a5c2e,
+    -3px 0 0 #1a5c2e,
+    0 3px 0 #1a5c2e,
+    0 -3px 0 #1a5c2e,
+    5px 5px 0 #ff3d9a;
+
+  border-radius: 0;
+
+  transition: transform 0.1s steps(2);
+}
+
+.create-btn:hover {
+  transform: translate(-2px, -2px);
+}
+
+/* ========================================
+   NAVIGATION LINKS
+======================================== */
+
+.pill-nav-link {
+  padding: 10px 22px;
+
+  border-radius: 999px;
+
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 13px;
+
+  text-decoration: none;
+
+  color: #fff;
+  background: transparent;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.15s ease;
+
+  white-space: nowrap;
+}
+
+.pill-nav-link:hover {
+  background: rgba(255, 225, 77, 0.15);
+}
+
+/* ========================================
+   ACTIVE NAVIGATION ITEM
+   PIXEL / 8-BIT STYLE
+======================================== */
+
+.pill-nav-active {
+  position: relative;
+
+  background: #ffe14d;
+  color: #1a5c2e;
+
+  padding: 14px 28px;
+
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  border: 4px solid #1a5c2e;
+  border-radius: 0;
+
+  image-rendering: pixelated;
+
+  clip-path: polygon(
+    0% 8px,
+    8px 8px,
+    8px 0%,
+    calc(100% - 8px) 0%,
+    calc(100% - 8px) 8px,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    8px calc(100% - 8px),
+    0% calc(100% - 8px)
+  );
+
+  transition: transform 0.1s steps(2);
+}
+
+.pill-nav-active:hover {
+  transform: translate(-2px, -2px);
+  background: #ffe14d;
+  color: #1a5c2e;
+}
+
+/* ========================================
+   BOTTOM INFORMATION BAR
+   FROSTED GLASS
+======================================== */
+
+.hero-bottom-bar {
+  position: absolute;
+
+  bottom: 84px;
+  left: 24px;
+  right: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-wrap: wrap;
+  gap: 8px;
+
+  background: rgba(255, 225, 77, 0.18);
+
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+
+  padding: 14px 24px;
+
+  color: #ffe14d;
+
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  border: 2px solid rgba(255, 225, 77, 0.5);
+  border-radius: 0;
+
+  z-index: 4;
+
+  clip-path: polygon(
+    0 8px,
+    8px 8px,
+    8px 0,
+    calc(100% - 8px) 0,
+    calc(100% - 8px) 8px,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    8px calc(100% - 8px),
+    0 calc(100% - 8px)
+  );
+
+  box-shadow: 5px 5px 0 rgba(51, 209, 122, 0.4);
+
+  transition:
+    transform 0.12s steps(2),
+    box-shadow 0.12s steps(2);
+}
+
+/* ========================================
+   PIXEL PILL
+======================================== */
+
+.pixel-pill {
+  position: relative;
+
+  border-radius: 0;
+
+  clip-path: polygon(
+    0% 8px,
+    8px 8px,
+    8px 0%,
+    calc(100% - 8px) 0%,
+    calc(100% - 8px) 8px,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    8px calc(100% - 8px),
+    0% calc(100% - 8px)
+  );
+
+  image-rendering: pixelated;
+
+  transition: transform 0.12s steps(2);
+}
+
+.pixel-pill::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: #ff3d9a;
+
+  clip-path: inherit;
+
+  transform: translate(6px, 6px);
+
+  z-index: -1;
+}
+
+.pixel-pill:hover {
+  transform: translate(-3px, -3px);
+}
+
+/* ========================================
+   HERO CENTER
+======================================== */
+
+.hero-center {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: min(90vw, 1200px);
+  max-width: 1200px;
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  z-index: 3;
+}
+
+.hero-wordmark {
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+}
+
+.desktop-cta {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* ========================================
+   VISIBILITY
+======================================== */
+
+.desktop-only {
+  display: none;
+}
+
+.mobile-only {
+  display: flex;
+}
+
+.mobile-tablet-only {
+  display: none;
+}
+
+/* ========================================
+   MOBILE HERO WORDMARK
+======================================== */
+
+.hero-wordmark-mobile {
+  width: 60vw;
+  max-width: 300px;
+  height: auto;
+}
+
+/* ========================================
+   TABLET / DESKTOP
+======================================== */
+
+@media (min-width: 768px) {
+  .desktop-only {
+    display: flex;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .hero-wordmark {
+    margin-top: -30px;
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-tablet-only {
+    display: block;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .hero-bottom-bar {
+    left: 12px;
+    right: 12px;
+
+    flex-direction: column;
+
+    text-align: center;
+    align-items: center;
+
+    gap: 6px;
+  }
+
+  .hero-tags-row {
+    left: 12px;
+    right: 12px;
+  }
+
+  .pill-nav {
+    top: 16px;
+    right: 12px;
+
+    gap: 10px;
+  }
+
+  .pill-nav-link {
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+
+  .pill-nav-active {
+    background: #ffe14d;
+    color: #1a5c2e;
+
+    padding: 14px 28px;
+
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 14px;
+
+    text-decoration: none;
+
+    border: 4px solid #1a5c2e;
+  }
+
+  .hero-wordmark {
+    width: 90%;
+    max-width: 340px;
+    margin-top: 0;
+  }
+
+  .hero-center {
+    top: 45%;
+  }
+}
+
+/* =========================================================
+   GENERATOR PAGE
+========================================================= */
+
+.generator-page {
+  position: relative;
+
+  width: 100vw;
+  min-height: 100dvh;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  box-sizing: border-box;
+
+  background: transparent;
+
+  font-size: 0.85rem;
+}
+
+/* ========================================
+   GENERATOR PIXEL BACKGROUND
+======================================== */
+
+.generator-background {
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100dvh !important;
+
+  z-index: 0 !important;
+
+  pointer-events: none;
+
+  overflow: hidden;
+}
+
+.generator-background canvas {
+  display: block;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  image-rendering: pixelated;
+}
+
+/* ========================================
+   GENERATOR CONTENT
+======================================== */
+
+.generator-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1200px;
+
+  min-height: 100dvh;
+
+  margin: 0 auto;
+
+  padding: 24px 16px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 16px;
+}
+
+/* ========================================
+   GENERATOR LEFT
+======================================== */
+
+.generator-left {
+  width: calc(100% - 32px);
+
+  max-width: 480px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  box-sizing: border-box;
+}
+
+/* ========================================
+   GENERATOR RIGHT
+======================================== */
+
+.generator-right {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+/* ========================================
+   PROGRESS BAR
+======================================== */
+
+.gen-progress-bar {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #ffe14d;
+
+  color: #1a5c2e;
+
+  padding: 10px 16px;
+
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-weight: 800;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+
+  border: 4px solid #1a5c2e;
+
+  box-sizing: border-box;
+}
+
+/* ========================================
+   GENERATOR PILL
+======================================== */
+
+.gen-pill {
+  position: relative;
+
+  width: 100%;
+
+  background-color: #ffe14d;
+
+  border: 4px solid #1a5c2e;
+
+  margin-bottom: 16px;
+
+  box-sizing: border-box;
+
+  z-index: 1;
+}
+
+.gen-pill::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-color: #ff3d9a;
+
+  transform: translate(6px, 6px);
+
+  z-index: -1;
+}
+
+/* ========================================
+   GENERATOR PILL HEADER
+======================================== */
+
+.gen-pill-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 11px 14px;
+
+  min-height: 38px;
+
+  background-color: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  font-size: 12px;
+
+  color: #1a5c2e;
+
+  text-align: left;
+
+  box-sizing: border-box;
+}
+
+.gen-pill-header:hover {
+  background-color: rgba(26, 92, 46, 0.04);
+}
+
+.gen-pill-dot {
+  color: #1a5c2e;
+
+  line-height: 1;
+}
+
+.gen-pill-dot.done {
+  color: #ff3d9a;
+}
+
+.gen-pill-arrow {
+  margin-left: auto;
+
+  font-size: 20px;
+
+  line-height: 1;
+}
+
+/* ========================================
+   GENERATOR PILL BODY
+======================================== */
+
+.gen-pill-body {
+  padding: 0 14px 14px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  box-sizing: border-box;
+}
+
+.gen-pill-body label {
+  font-size: 11px;
+
+  font-weight: 700;
+
+  color: #1a5c2e;
+
+  letter-spacing: 1px;
+
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+/* ========================================
+   GENERATOR INPUT
+======================================== */
+
+.gen-input {
+  width: 100%;
+
+  min-height: 44px;
+
+  border: 3px solid #1a5c2e;
+
+  background-color: #ffffff;
+
+  padding: 8px 10px;
+
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-weight: 600;
+
+  font-size: 13px;
+
+  color: #1a5c2e;
+
+  box-sizing: border-box;
+
+  outline: none;
+
+  border-radius: 0;
+}
+
+.gen-input::placeholder {
+  color: #6b7f70;
+
+  opacity: 1;
+}
+
+.gen-input:focus {
+  border-color: #ff3d9a;
+
+  outline: none;
+}
+
+/* ========================================
+   photo INPUT
+======================================== */
+
+.gen-input[type="file"] {
+  cursor: pointer;
+
+  padding: 8px;
+
+  background-color: #ffffff;
+}
+
+.gen-input[type="file"]::file-selector-button {
+  background-color: #1a5c2e;
+
+  color: #ffe14d;
+
+  border: none;
+
+  padding: 8px 12px;
+
+  margin-right: 10px;
+
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.gen-input[type="file"]::file-selector-button:hover {
+  background-color: #ff3d9a;
+
+  color: #ffffff;
+}
+
+/* ========================================
+   photo UPLOAD STATUS
+======================================== */
+
+.gen-photo-status {
+  color: #1a5c2e;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-top: 4px;
+}
+
+/* ========================================
+   role GRID
+======================================== */
+
+.gen-role-grid {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+/* ========================================
+   role BUTTON
+======================================== */
+
+.gen-role-btn {
+  border: 3px solid #1a5c2e;
+
+  background-color: #ffffff;
+
+  padding: 8px 11px;
+
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-weight: 700;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  color: #1a5c2e;
+
+  min-height: 36px;
+
+  box-sizing: border-box;
+
+  border-radius: 0;
+
+  transition:
+    background-color 0.1s steps(2),
+    color 0.1s steps(2),
+    transform 0.1s steps(2);
+}
+
+.gen-role-btn:hover {
+  transform: translate(-1px, -1px);
+}
+
+.gen-role-btn.active {
+  background-color: #ff3d9a;
+
+  color: #ffffff;
+
+  border-color: #1a5c2e;
+}
+
+/* ========================================
+   SKILL INPUT ROW
+======================================== */
+
+.gen-skill-input-row {
+  display: flex;
+
+  gap: 8px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+/* ========================================
+   ADD SKILL BUTTON
+======================================== */
+
+.gen-add-btn {
+  flex-shrink: 0;
+
+  min-height: 36px;
+
+  padding: 8px 13px;
+
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  background-color: #ffe14d;
+
+  color: #1a5c2e;
+
+  border: 3px solid #1a5c2e;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  border-radius: 0;
+}
+
+.gen-add-btn:hover {
+  background-color: #ff3d9a;
+
+  color: #ffffff;
+}
+
+/* ========================================
+   SKILL TAGS
+======================================== */
+
+.gen-skill-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: 8px;
+}
+
+.gen-skill-tag {
+  background-color: #1a5c2e;
+
+  color: #ffe14d;
+
+  padding: 5px 8px;
+
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  user-select: none;
+}
+
+.gen-skill-tag:hover {
+  background-color: #ff3d9a;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   ID CARD
+========================================================= */
+
+.id-card-preview {
+  position: relative !important;
+
+  background-color: #ffe14d !important;
+
+  border: 4px solid #1a5c2e !important;
+
+  padding: 19px;
+
+  width: 260px;
+
+  max-width: 100%;
+
+  color: #1a5c2e;
+
+  font-family: "Pixelify Sans", sans-serif;
+
+  box-sizing: border-box;
+
+  border-radius: 0;
+
+  overflow: visible;
+
+  z-index: 1;
+}
+
+.id-card-preview::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-color: #ff3d9a;
+
+  transform: translate(6px, 6px);
+
+  z-index: -1;
+}
+
+/* ========================================
+   ID CARD HEADER
+======================================== */
+
+.id-card-header {
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-weight: 800;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 13px;
+
+  text-align: center;
+
+  color: #1a5c2e !important;
+}
+
+/* ========================================
+   ID CARD photo
+======================================== */
+
+.id-card-photo {
+  width: 100%;
+
+  height: 112px;
+
+  margin-bottom: 10px;
+
+  background-color: #1a5c2e;
+
+  color: #ffe14d;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-weight: 700;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+/* ========================================
+   UPLOADED photo
+======================================== */
+
+.id-card-photo img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  display: block;
+}
+
+/* ========================================
+   ID CARD NAME
+======================================== */
+
+.id-card-name {
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  color: #1a5c2e !important;
+
+  line-height: 1.1;
+
+  word-break: break-word;
+}
+
+/* ========================================
+   ID CARD role
+======================================== */
+
+.id-card-role {
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  color: #1a5c2e !important;
+
+  word-break: break-word;
+}
+
+/* ========================================
+   ID CARD Your-team
+======================================== */
+
+.id-card-Your-team {
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  color: #1a5c2e !important;
+
+  word-break: break-word;
+}
+
+/* ========================================
+   ID CARD TRAVEL
+======================================== */
+
+.id-card-travel {
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: #1a5c2e !important;
+
+  margin: 8px 0;
+
+  padding: 6px 0;
+
+  border-top: 2px dashed #1a5c2e;
+
+  border-bottom: 2px dashed #1a5c2e;
+}
+
+/* ========================================
+   ID CARD SKILLS
+======================================== */
+
+.id-card-skills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 4px;
+
+  margin: 12px 0;
+}
+
+/* ========================================
+   ID CARD SKILL BADGE
+======================================== */
+
+.id-card-skill-badge {
+  background-color: #1a5c2e;
+
+  color: #ffe14d;
+
+  padding: 2px 6px;
+
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  box-sizing: border-box;
+}
+
+/* ========================================
+   ID CARD Player ID
+======================================== */
+
+.id-card-id {
+  font-family: "Pixelify Sans", sans-serif;
+
+  font-size: 9px;
+
+  margin-top: 12px;
+
+  border-top: 2px dashed #1a5c2e;
+
+  padding-top: 8px;
+
+  color: #1a5c2e !important;
+}
+
+/* =========================================================
+   GENERATOR HEADER
+========================================================= */
+
+.gen-header-row {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  padding: 28px 16px 8px;
+}
+
+.gen-header-pill {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.12s steps(2);
+}
+
+.gen-header-pill:hover {
+  transform: translate(-2px, -2px);
+}
+
+/* ========================================
+   HEADER SHADOW
+======================================== */
+
+.gen-header-pill::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  transform: translate(6px, 6px);
+}
+
+.gen-header-pill:hover::after {
+  transform: translate(9px, 9px);
+}
+
+/* ========================================
+   HACKER HOUSE PILL
+======================================== */
+
+.gen-header-pill-hh {
+  height: 96px;
+
+  padding: 12px 34px;
+
+  box-sizing: border-box;
+
+  background-color: #0d3d1f;
+
+  border: 3px solid #ffe14d;
+}
+
+.gen-header-pill-hh::after {
+  background-color: #1a5c2e;
+}
+
+.gen-header-pill-hh img {
+  height: 76px;
+
+  width: auto;
+
+  max-width: 100%;
+
+  object-fit: contain;
+
+  image-rendering: -webkit-optimize-contrast;
+
+  image-rendering: crisp-edges;
+}
+
+/* ========================================
+   247 PILL
+======================================== */
+
+.gen-header-pill-247 {
+  height: 96px;
+
+  padding: 12px 28px;
+
+  box-sizing: border-box;
+
+  background-color: #0d3d1f;
+
+  border: 3px solid #ffe14d;
+}
+
+.gen-header-pill-247::after {
+  background-color: #1a5c2e;
+}
+
+.gen-header-pill-247 img {
+  height: 64px;
+
+  width: auto;
+
+  max-width: 100%;
+
+  object-fit: contain;
+
+  image-rendering: -webkit-optimize-contrast;
+
+  image-rendering: crisp-edges;
+}
+
+/* ========================================
+   CONTINUE BUTTON
+======================================== */
+
+.gen-continue-btn {
+  display: block;
+
+  text-align: center;
+
+  margin-top: 12px;
+
+  width: 260px;
+
+  max-width: 100%;
+
+  background-color: #ffe14d;
+
+  color: #1a5c2e;
+
+  border: 4px solid #1a5c2e;
+
+  padding: 14px 0;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  font-family: "Pixelify Sans", sans-serif;
+
+  box-sizing: border-box;
+}
+
+.gen-continue-btn:hover {
+  background-color: #ff3d9a;
+
+  color: #ffffff;
+
+  transform: translate(-2px, -2px);
+}
+
+/* ========================================
+   DESKTOP CTA
+======================================== */
+
+.hero-desktop-cta {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hero-desktop-cta {
+    display: inline-flex;
+
+    margin-top: 20px;
+  }
+}
+
+/* =========================================================
+   TABLET GENERATOR
+========================================================= */
+
+@media (min-width: 769px) {
+  .generator-content {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) auto;
+
+    align-items: start;
+
+    gap: 48px;
+
+    padding: 48px 32px;
+  }
+
+  .generator-left {
+    width: 100%;
+
+    max-width: 480px;
+
+    margin: 0;
+  }
+
+  .generator-right {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    position: sticky;
+
+    top: 32px;
+  }
+}
+
+/* =========================================================
+   GENERATOR — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+  .generator-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 16px;
+  }
+
+  .generator-left {
+    width: 100%;
+
+    max-width: 480px;
+
+    margin: 0 auto;
+  }
+
+  .generator-right {
+    width: 100%;
+
+    justify-content: center;
+
+    position: static;
+  }
+}
+
+/* =========================================================
+   GENERATOR — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .generator-content {
+    padding: 16px;
+
+    gap: 16px;
+  }
+
+  .generator-left {
+    width: 100%;
+
+    max-width: 100%;
+
+    order: 1;
+  }
+
+  .generator-right {
+    width: 100%;
+
+    order: 2;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  .id-card-preview {
+    width: 100%;
+
+    max-width: 340px;
+
+    margin: 0 auto;
+
+    padding: 24px;
+  }
+
+  .gen-pill-header {
+    padding: 16px 18px;
+
+    font-size: 15px;
+
+    min-height: 48px;
+  }
+
+  .gen-input,
+  .gen-role-btn,
+  .gen-add-btn {
+    min-height: 44px;
+
+    font-size: 16px;
+  }
+
+  .gen-progress-bar {
+    font-size: 13px;
+
+    padding: 10px 16px;
+  }
+
+  .id-card-name {
+    font-size: 18px;
+  }
+
+  .id-card-Your-team,
+  .id-card-role {
+    word-break: break-word;
+  }
+
+  .gen-continue-btn {
+    width: 200px;
+
+    margin: 12px auto 0;
+
+    padding: 11px 0;
+
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   GENERATOR — SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+  .generator-content {
+    padding: 12px;
+
+    gap: 12px;
+  }
+
+  .gen-header-row {
+    gap: 12px;
+
+    padding: 18px 12px 6px;
+  }
+
+  .gen-header-pill-hh {
+    height: 72px;
+
+    padding: 10px 22px;
+  }
+
+  .gen-header-pill-hh img {
+    height: 54px;
+  }
+
+  .gen-header-pill-247 {
+    height: 72px;
+
+    padding: 10px 18px;
+  }
+
+  .gen-header-pill-247 img {
+    height: 46px;
+  }
+
+  .gen-pill-header {
+    padding: 14px;
+
+    font-size: 14px;
+  }
+
+  .gen-pill-body {
+    padding: 0 14px 16px;
+  }
+
+  .gen-skill-input-row {
+    flex-direction: column;
+  }
+
+  .gen-add-btn {
+    width: 100%;
+  }
+
+  .id-card-preview {
+    padding: 20px;
+  }
+
+  .id-card-photo {
+    height: 130px;
+  }
+}
+
+/* =========================================================
+   GENERATOR — VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 375px) {
+  .generator-content {
+    padding: 10px;
+  }
+
+  .id-card-preview {
+    padding: 16px;
+  }
+
+  .id-card-photo {
+    height: 110px;
+  }
+
+  .id-card-name {
+    font-size: 17px;
+  }
+}
+
+/* =========================================================
+   UNIFIED PIXEL PILL SYSTEM
+========================================================= */
+
+.pixel-pill {
+  position: relative;
+
+  border-radius: 0;
+
+  clip-path: polygon(
+    0% 8px,
+    8px 8px,
+    8px 0%,
+    calc(100% - 8px) 0%,
+    calc(100% - 8px) 8px,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    8px calc(100% - 8px),
+    0% calc(100% - 8px)
+  );
+
+  z-index: 1;
+}
+
+.pixel-pill::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-color: #ff3d9a;
+
+  clip-path: inherit;
+
+  transform: translate(6px, 6px);
+
+  z-index: -1;
+}
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+
+  min-height: 100vh;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+/* =========================================================
+   HERO PIXEL BACKGROUND
+========================================================= */
+
+.hero-background {
+  position: absolute !important;
+
+  inset: 0 !important;
+
+  width: 100% !important;
+
+  height: 100% !important;
+
+  z-index: 0 !important;
+
+  pointer-events: none;
+
+  overflow: hidden;
+}
+
+.hero-background canvas {
+  display: block;
+
+  width: 100% !important;
+
+  height: 100% !important;
+
+  image-rendering: pixelated;
+}
+
+/* =========================================================
+   FINAL DESKTOP GENERATOR LAYOUT
+========================================================= */
+
+@media (min-width: 900px) {
+  .generator-content {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) auto;
+
+    align-items: start;
+
+    gap: 48px;
+
+    padding: 48px 32px;
+  }
+
+  .generator-left {
+    width: 100%;
+
+    max-width: 480px;
+
+    margin: 0;
+  }
+
+  .generator-right {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    position: sticky;
+
+    top: 32px;
+  }
+}
+.final-page-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 16px 40px;
+}
+
+.final-page-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.final-title-pill {
+  position: relative;
+  z-index: 2;
+  background-color: #ffe14d;
+  border: 4px solid #1a5c2e;
+  padding: 16px 28px;
+  margin-bottom: 32px;
+  max-width: 90%;
+}
+
+.final-title-pill h1 {
+  color: #1a5c2e;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 22px;
+  margin: 0;
+  text-align: center;
+}
+
+.final-panel {
+  position: relative;
+  z-index: 2;
+  background-color: #1a5c2e;
+  border: 5px solid #ffe14d;
+  box-shadow: 8px 8px 0 #ff3d9a;
+  max-width: 900px;
+  width: calc(100% - 80px);
+  margin: 0 auto;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  min-height: 50vh;
+}
+
+.final-loadout-btn {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin-top: 28px;
+  background-color: #ffe14d;
+  color: #1a5c2e;
+  border: 4px solid #1a5c2e;
+  padding: 14px 32px;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.final-loadout-btn:hover {
+  background-color: #ff3d9a;
+  color: #ffffff;
+}
+
+@media (max-width: 480px) {
+  .final-title-pill h1 {
+    font-size: 16px;
+  }
+
+  .final-panel {
+    width: calc(100% - 32px);
+    padding: 40px 20px;
+    min-height: 40vh;
+  }
+
+  .final-loadout-btn {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+}
